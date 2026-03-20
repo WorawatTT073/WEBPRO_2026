@@ -1,0 +1,41 @@
+@font-face {
+    font-family: myWebFont;
+    src: url("../Fonts/ChakraPetch-Regular.ttf") ;
+}
+
+body {
+    font-family: myWebFont;
+    margin: 0;
+    background-color: rgb(250, 237, 218);
+    justify-content: center;
+    align-items: center;
+    max-height: fit-content;
+}
+
+.CALEN {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    gap: 2px;
+}
+
+.CALEN :hover{
+    transform: scale(1.02);
+    color: red;
+}
+
+.days {
+    font-size: 0.6cm;
+    text-align: center;
+}
+
+.date {
+    text-align: center;
+    border: 2px solid black;
+    padding: 10px 20px 10px 20px;
+}
+
+.other-month {
+    background-color: lightslategray;
+    color: whitesmoke;
+}

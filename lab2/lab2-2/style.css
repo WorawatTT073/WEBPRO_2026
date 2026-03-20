@@ -1,0 +1,35 @@
+@font-face {
+    font-family: myWebFont;
+    src: url("../Fonts/ChakraPetch-Regular.ttf") ;
+}
+
+body{
+    font-family: myWebFont;
+    background-color: beige;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding:5px;
+    text-align: left;
+}
+
+td.score-cell {
+    width: auto;
+}
+
+.bar {
+    height: 30px;
+    line-height: 30px;
+    color: black;
+    padding: 2px;
+    border-radius: 10px;
+}
+.red    { background: red; }
+.orange { background: rgb(255, 145, 0); }
+.yellow { background: yellow; color: black; }
+.lime   { background: rgb(102, 255, 0); color: black; }
+.green  { background: rgb(1, 163, 1); }
