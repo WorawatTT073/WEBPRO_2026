@@ -1,0 +1,9 @@
+@font-face {
+    font-family: myWebFont;
+    src: url("../Fonts/ChakraPetch-Regular.ttf") ;
+}
+
+body {
+    font-family: myWebFont;
+}
+

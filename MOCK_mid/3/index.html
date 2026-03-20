@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Money Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Money Table</h1>
+
+<table id="moneyTable">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>income</th>
+      <th>expense</th>
+      <th>action</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+  <tfoot>
+    <tr class="total-row">
+      <td colspan="2">TOTAL</td>
+      <td id="totalIncome">0</td>
+      <td id="totalExpense">0</td>
+      <td id="netTotal">0</td>
+    </tr>
+  </tfoot>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>

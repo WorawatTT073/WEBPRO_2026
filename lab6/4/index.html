@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>4</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="card">
+
+        <header class="card-header">
+            <span class="icon">🎬</span>
+            <h1>รายการภาพยนตร์/ซีรีส์โปรด</h1>
+        </header>
+
+        <!-- Form -->
+        <form id="movieForm" class="form-row" autocomplete="off">
+            <input
+                id="titleInput"
+                type="text"
+                placeholder="ชื่อภาพยนตร์หรือซีรีส์..."
+            />
+
+            <button type="submit" id="addBtn" class="btn primary">
+                + เพิ่ม
+            </button>
+
+            <button type="button" id="clearBtn" class="btn danger">
+                ลบทั้งหมด
+            </button>
+        </form>
+
+        <div id="listArea" class="list-area">
+            <p class="empty">ยังไม่มีรายการโปรด</p>
+            <ul
+                id="movieList"
+                class="movie-list"
+                aria-live="polite"
+            ></ul>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

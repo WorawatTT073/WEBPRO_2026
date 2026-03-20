@@ -1,0 +1,10 @@
+{
+  "money": [
+    { "id": "F01", "name": "Nano", "type": "income", "amount": 87 },
+    { "id": "F02", "name": "Coptor", "type": "income", "amount": 100 },
+    { "id": "F03", "name": "Tonkla", "type": "expense", "amount": 90 },
+    { "id": "F04", "name": "toby", "type": "income", "amount": 25 },
+    { "id": "F05", "name": "rachata", "type": "expense", "amount": 56 },
+    { "id": "F06", "name": "flook", "type": "expense", "amount": 67 }
+  ]
+}

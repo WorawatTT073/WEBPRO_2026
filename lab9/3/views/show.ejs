@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ระบบติดตามคำสั่งซื้อ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .btn-add {
+            background-color: #006400;
+            color: white;
+            border: 1px solid #004d00;
+            border-radius: 2px;
+            padding: 5px 15px;
+        }
+        
+        .btn-add:hover {
+            background-color: #004d00;
+            color: white;
+        }
+        
+        .btn-update {
+            background-color: #3b0b59;
+            color: white;
+            border: 1px solid #2a0840;
+            border-radius: 2px;
+            padding: 3px 15px;
+        }
+        
+        .btn-update:hover {
+            background-color: #2a0840;
+            color: white;
+        }
+        
+        .form-control {
+            border-radius: 0;
+            border: 1px solid #ccc;
+        }
+        
+        .custom-input {
+            width: 220px;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body class="container mt-4 mb-5">
+
+    <h3 class="mb-4">📦 ระบบติดตามคำสั่งซื้อ</h3>
+
+    <form action="/add" method="POST">
+        <div>
+            <input type="text" name="name" class="form-control custom-input" placeholder="ชื่อลูกค้า" required>
+            <input type="text" name="list" class="form-control custom-input" placeholder="รายการสินค้า" required>
+            <input type="text" name="address" class="form-control custom-input" placeholder="ที่อยู่" required>
+        </div>
+        <div>
+            <input type="text" name="phone" class="form-control custom-input" placeholder="เบอร์โทร" required>
+            <button type="submit" class="btn-add">เพิ่มคำสั่งซื้อ</button>
+        </div>
+    </form>
+
+    <h4 class="mt-5 mb-3 fw-bold">รายการคำสั่งซื้อ</h4>
+
+    <table class="table table-bordered align-middle">
+        <thead class="text-center" style="background-color: #fcfcfc;">
+            <tr>
+                <th style="width: 5%;">ID</th>
+                <th style="width: 20%;">ลูกค้า</th>
+                <th style="width: 30%;">สินค้า</th>
+                <th style="width: 15%;">สถานะ</th>
+                <th style="width: 30%;">เปลี่ยนสถานะ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(function(item) { %>
+                <tr>
+                    <td class="text-center">
+                        <%= item.ID %>
+                    </td>
+                    <td>
+                        <%= item.name %>
+                    </td>
+                    <td>
+                        <%= item.list %>
+                    </td>
+                    <td class="text-center">
+                        <%= item.status || 'รอดำเนินการ' %>
+                    </td>
+                    <td>
+                        <form action="/update/<%= item.ID %>" method="POST" class="d-flex justify-content-center align-items-center gap-2 m-0">
+                            <select name="status" class="form-select form-select-sm" style="width: 130px; border-radius: 0;">
+                                <option value="รอดำเนินการ" <%= item.status == 'รอดำเนินการ' ? 'selected' : '' %>>รอดำเนินการ</option>
+                                <option value="กำลังจัดส่ง" <%= item.status == 'กำลังจัดส่ง' ? 'selected' : '' %>>กำลังจัดส่ง</option>
+                                <option value="จัดส่งแล้ว" <%= item.status == 'จัดส่งแล้ว' ? 'selected' : '' %>>จัดส่งแล้ว</option>
+                                <option value="ยกเลิก" <%= item.status == 'ยกเลิก' ? 'selected' : '' %>>ยกเลิก</option>
+                            </select>
+                            <button type="submit" class="btn-update">อัปเดต</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

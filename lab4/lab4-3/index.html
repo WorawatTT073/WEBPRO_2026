@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ขุนทอง</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>ตารางรายรับ-รายจ่าย</h2>
+    <h3>ยอดคงเหลือ: <span id="balance">0</span></h3>
+
+    <input type="text" id="title" placeholder="รายการ">
+    <input type="number" id="amount" placeholder="จำนวนเงิน">
+    <select id="type">
+        <option value="income">รายรับ</option>
+        <option value="expense">รายจ่าย</option>
+    </select>
+    <input type="date" id="date">
+    <button onclick="addItem()">เพิ่มรายการ</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>วันที่</th>
+                <th>รายการ</th>
+                <th>รายรับ</th>
+                <th>รายจ่าย</th>
+            </tr>
+        </thead>
+        <tbody id="list"></tbody>
+    </table>
+
+<script src="script.js"></script>
+</body>
+</html>

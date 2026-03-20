@@ -1,0 +1,26 @@
+@font-face {
+    font-family: myWebFont;
+    src: url("../Fonts/ChakraPetch-Regular.ttf");
+}
+
+body {
+    font-family: myWebFont;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+  .articles {
+    grid-template-columns: 1fr;
+  }
+}

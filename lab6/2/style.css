@@ -1,0 +1,79 @@
+@font-face {
+    font-family: myWebFont;
+    src: url("../Fonts/ChakraPetch-Regular.ttf");
+}
+
+body {
+    font-family: myWebFont;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+#block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.avatar {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.scores {
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+}
+
+.scores p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    #block {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #block {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #block {
+        grid-template-columns: 1fr;
+    }
+}

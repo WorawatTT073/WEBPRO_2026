@@ -1,0 +1,40 @@
+@font-face {
+    font-family: myWebFont;
+    src: url("../Fonts/ChakraPetch-Regular.ttf") ;
+}
+
+body {
+    font-family: myWebFont;
+    text-align: center;
+}
+
+#numbers {
+    margin: 20px;
+}
+
+.box {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+.blue {
+    background: #3b82f6;
+    color: white;
+}
+
+.black {
+    background: black;
+    color: white;
+}
+
+.white {
+    background: white;
+    color: black;
+    border: 3px solid black;
+}

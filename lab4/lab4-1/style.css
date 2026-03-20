@@ -1,0 +1,20 @@
+@font-face {
+    font-family: myWebFont;
+    src: url("../Fonts/ChakraPetch-Regular.ttf");
+}
+
+body {
+    font-family: myWebFont;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 15px;
+    
+}
+th, td {
+    border: 1px solid #000;
+    padding: 8px 12px;
+    text-align: center;
+    
+}
