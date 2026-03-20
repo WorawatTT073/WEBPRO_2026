@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    ก
+</head>
+
+<body class="container mt-4">
+    <h2>User List</h2>
+    <table class="table table-bordered border-dark">
+        <thead>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>USERNAME</th>
+            <th>EMAIL</th>
+            <th>OPERATION</th>
+        </thead>
+        <tbody>
+            <% data.forEach((item)=>{ %>
+                <tr>
+                    <td><%=item.id%></td>
+                    <td><%=item.first_name%> <%=item.last_name%></td>
+                    <td><%=item.username%></td>
+                    <td><%=item.email%></td>
+                    <td>
+                        <a href="/edit/<%= item.id %>" class="btn btn-warning">edit</a>
+                        <a href="/delete/<%= item.id %>" class="btn btn-danger">delete</a>
+                    </td>
+                </tr>   
+            <% }); %>  
+        </tbody>
+    </table>
+    <form action="/insert" method="POST">
+    <div class="d-flex gap-3 mb-5">
+        <div>Firstname: 
+            <input type="text" name="first_name">
+        </div>
+        <div>Lastname: 
+            <input type="text" name="last_name">
+        </div>
+        <div>Username: 
+            <input type="text" name="username">
+        </div>
+        <div>Password: 
+            <input type="text" name="password">
+        </div>
+        <div>Email: 
+            <input type="text" name="email">
+        </div>
+        <div>
+            <button class="btn btn-success mt-3">Submit</button>
+        </div>
+    </div>
+    
+</body>
+</html>

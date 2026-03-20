@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Menu</a>
+        <a href="/cart">Cart</a>
+    </div>
+    <div class="cart">
+        <h2>List of items</h2>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            <% cart.forEach((item,index)=>{ %>
+                <tr>
+                    <td><%= index+1 %></td>
+                    <td><%= item.name %></td>
+                    <td><%= item.price %></td>
+                </tr>
+            <% }) %>
+        </table>
+        <p class="total">total price : <%= total %> THB</p>
+        <a class="confirm" href="/confirm">Confirm Order</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <script src="/bootstrap/js/bootstrap/min.js"></script>
+</head>
+<body>
+    <form action="/update" method="POST">
+        <div class="d-flex gap-3 mt-2">
+            <div>ID: <input type="text" name="id" value="<%=item.id %>" readonly></div>
+            <div>Firstname: <input type="text" name="first_name" value="<%=item.first_name%>"></div>
+            <div>Lastname: <input type="text" name="last_name" value="<%=item.last_name%>"></div>
+            <div>Email: <input type="text" name="email" value="<%=item.email%>"></div>
+            <div>Gender:
+                <select name="gender">
+                    <option value="Male" <%= item.gender === 'Male' ? 'selected' : '' %>>Male</option>
+                    <option value="Female" <%= item.gender === 'Female' ? 'selected' : '' %>>Female</option>
+                </select>
+            </div>
+            <div><button class="btn btn-success">submit</button></div>
+        </div>
+        <a href="/" class=" text-decoration-none ">Back to show</a>
+    </form>
+</body>
+</html>
