@@ -37,48 +37,7 @@
 ```sql
 SELECT * FROM users;
 
-ได้เลยครับ นี่คือไฟล์ **README.md ฉบับเต็ม** ที่ “เอาของคุณ + ส่วนที่เติม” รวมกันเรียบร้อย เอาไปวางทับได้เลย 👇
-
-````md id="finalready01"
-# 📘 WEBPRO_2026
-
-## 🧠 ทฤษฎี Final
-
----
-
-## 🧩 1. Web Service Architecture
-
-<img width="477" height="524" alt="image" src="https://github.com/user-attachments/assets/355ecf8c-8c50-4e90-a93b-cfaaa1423a67" />
-
-### 🔹 1.1 Publish Operation
-- Service Provider นำ service ไปลงทะเบียนใน **Service Registry**
-
-### 🔹 1.2 Find Operation
-- Service Requestor ค้นหา service จาก **Service Registry**
-
-### 🔹 1.3 Bind Operation
-- Service Requestor เรียกใช้ service จาก **Service Provider**
-
----
-
-## ⚙️ 2. Server-side Script มีข้อดีอะไร
-
-- สร้างเว็บแบบ Dynamic (Dynamic Web Page)
-- เชื่อมต่อและจัดการฐานข้อมูล
-- เพิ่มความปลอดภัย (ซ่อน logic ไว้ที่ server)
-- จัดการ session / login / authentication
-- ประมวลผลข้อมูลก่อนส่งกลับ client
-
----
-
-## 🗃️ 3. SQL
-
-### 🔹 3.1 DQL (Data Query Language)
-ใช้สำหรับ “ดึงข้อมูล”
-
-```sql
-SELECT * FROM users;
-````
+```
 
 ### 🔹 3.2 DML (Data Manipulation Language)
 
