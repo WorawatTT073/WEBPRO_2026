@@ -1,6 +1,8 @@
-<img width="477" height="524" alt="image" src="https://github.com/user-attachments/assets/355ecf8c-8c50-4e90-a93b-cfaaa1423a67" /># WEBPRO_2026
+
+# WEBPRO_2026
 ทฤษฎี final
 1.เติมคำในช่อง Web Service Architecture
+<img width="477" height="524" alt="image" src="https://github.com/user-attachments/assets/355ecf8c-8c50-4e90-a93b-cfaaa1423a67" />
   1.1 Publish operation
   1.2 Find operation
   1.3 Bind operation
