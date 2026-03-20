@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Products</title>
+    <style>
+        body { font-family: Arial; }
+        .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .card { border: 1px solid #ccc; padding: 10px; border-radius: 10px; }
+        img { width: 100%; height: 150px; object-fit: cover; }
+        button { background: blue; color: white; padding: 5px 10px; border: none; }
+        .detail-box { width: 400px; border: 1px solid #ccc; padding: 20px; }
+    </style>
+</head>
+<body>
+
+<h1>My Products</h1>
+
+<% if (products) { %>
+    <div class="container">
+        <% products.forEach(function(p) { %>
+            <div class="card">
+                <img src="<%= p.image_url %>">
+                <h3><%= p.name %></h3>
+                <p><%= p.description %></p>
+
+                <!-- ใช้ product_id -->
+                <a href="/detail/<%= p.product_id %>">
+                    <button>Detail</button>
+                </a>
+
+            </div>
+        <% }); %>
+    </div>
+<% } %>
+
+<% if (detail) { %>
+    <div class="detail-box">
+        <img src="<%= detail.image_url %>" width="100%">
+        <h2><%= detail.name %></h2>
+        <p>Description: <%= detail.description %></p>
+        <p>Price: <%= detail.price %></p>
+        <p>Quantity: <%= detail.quantity %></p>
+        <a href="/">
+            <button>Go Back</button>
+        </a>
+    </div>
+<% } %>
+
+</body>
+</html>

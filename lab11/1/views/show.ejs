@@ -1,0 +1,30 @@
+<h2>Employee Information</h2>
+
+<form action="/save" method="post">
+
+Employee ID:
+<input type="text" name="CustomerId" value="<%= data ? data.CustomerId : '' %>"><br>
+
+Firstname:
+<input type="text" name="FirstName" value="<%= data ? data.FirstName : '' %>"><br>
+
+Lastname:
+<input type="text" name="LastName" value="<%= data ? data.LastName : '' %>"><br>
+
+Address:
+<textarea name="Address"><%= data ? data.Address : '' %></textarea><br>
+
+Email:
+<input type="text" name="Email" value="<%= data ? data.Email : '' %>"><br>
+
+Phone:
+<input type="text" name="Phone" value="<%= data ? data.Phone : '' %>"><br>
+
+<button type="submit">Save Data</button>
+
+</form>
+
+<br>
+
+<a href="/show">Show Data</a>
+<a href="/clear">Clear Data</a>
